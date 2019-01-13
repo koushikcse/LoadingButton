@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingButton">
+        <attr name="lb_buttonColor" format="color" />
+        <attr name="lb_loaderColor" format="color" />
+        <attr name="lb_isCircular" format="boolean" />
+        <attr name="lb_roundCorner" format="boolean" />
+        <attr name="lb_loaderPosition" format="string" />
+    </declare-styleable>
+</resources>
