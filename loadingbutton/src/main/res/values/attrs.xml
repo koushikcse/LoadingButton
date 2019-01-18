@@ -3,8 +3,14 @@
     <declare-styleable name="LoadingButton">
         <attr name="lb_buttonColor" format="color" />
         <attr name="lb_loaderColor" format="color" />
+        <attr name="lb_shadowColor" format="color" />
+        <attr name="lb_cornerRadius" format="dimension" />
+        <attr name="lb_shadowHeight" format="dimension" />
+        <attr name="lb_loaderWidth" format="dimension" />
+        <attr name="lb_loaderMargin" format="dimension" />
+        <attr name="lb_isShadowEnable" format="boolean" />
         <attr name="lb_isCircular" format="boolean" />
-        <attr name="lb_roundCorner" format="boolean" />
-        <attr name="lb_loaderPosition" format="string" />
+        <attr name="lb_isLoading" format="boolean" />
+
     </declare-styleable>
 </resources>
