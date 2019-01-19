@@ -1,5 +1,6 @@
 package com.kusu.loadingbutton;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -46,12 +47,14 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
     private String text = "";
     private Canvas mcanvas;
 
+    @SuppressLint("ClickableViewAccessibility")
     public LoadingButton(Context context) {
         super(context);
         init();
         this.setOnTouchListener(this);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public LoadingButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
@@ -59,6 +62,7 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
         this.setOnTouchListener(this);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public LoadingButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
@@ -108,8 +112,10 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
             } else if (attr == R.styleable.LoadingButton_lb_isLoading) {
                 isLoading = typedArray.getBoolean(attr, false);
             } else if (attr == R.styleable.LoadingButton_lb_loaderMargin) {
-                float progressMargin = typedArray.getDimension(attr, 0.0f);
-                mPaddingProgress = (int) progressMargin;
+                mPaddingProgress = mCornerRadius = typedArray.getDimensionPixelSize(attr, R.dimen.fbutton_default_progress_margin);
+            } else if (attr == R.styleable.LoadingButton_lb_loaderWidth) {
+                mStrokeWidth = mCornerRadius = typedArray.getDimensionPixelSize(attr, R.dimen.fbutton_default_progress_width);
+
             }
         }
         typedArray.recycle();
@@ -175,11 +181,7 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
     private void updateBackground(Drawable background) {
         if (background == null) return;
         //Set button background
-        if (Build.VERSION.SDK_INT >= 16) {
-            this.setBackground(background);
-        } else {
-            this.setBackgroundDrawable(background);
-        }
+        this.setBackground(background);
     }
 
     private LayerDrawable createDrawable(int radius, int topColor, int bottomColor) {
@@ -212,14 +214,6 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
 
     }
 
-    public void setFButtonPadding(int left, int top, int right, int bottom) {
-        mPaddingLeft = left;
-        mPaddingRight = right;
-        mPaddingTop = top;
-        mPaddingBottom = bottom;
-        refresh();
-    }
-
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
@@ -234,7 +228,6 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
     //Setter
     public void setShadowEnabled(boolean isShadowEnabled) {
         this.isShadowEnabled = isShadowEnabled;
-        setShadowHeight(0);
         refresh();
     }
 
@@ -264,10 +257,6 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
     public void setShadowHeight(int shadowHeight) {
         this.mShadowHeight = shadowHeight;
         refresh();
-    }
-
-    public int getCornerRadius() {
-        return mCornerRadius;
     }
 
     public void setCornerRadius(int cornerRadius) {

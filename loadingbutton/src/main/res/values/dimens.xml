@@ -7,4 +7,6 @@
     <dimen name="fbutton_default_padding_top">5dp</dimen>
     <dimen name="fbutton_default_padding_bottom">5dp</dimen>
     <dimen name="fbutton_default_shadow_height">4dp</dimen>
+    <dimen name="fbutton_default_progress_margin">15dp</dimen>
+    <dimen name="fbutton_default_progress_width">10dp</dimen>
 </resources>
