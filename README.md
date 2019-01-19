@@ -20,6 +20,35 @@ dependencies {
     implementation "com.github.koushikcse:LoadingButon:${latest-version}"
 }
 ```
+## How it works
+
+Sometimes we need to show loading on button as per requirement we don't want to block full screen view with default loading or dialogs. So you can use this library to show loading on button hide loading after that when you want. 
+
+## How to setup
+
+Its very easy to use **LoadingButton** as its a custom button and contain all features of android default button with some extra attributes.
+
+### Add it to a layout
+
+```xml
+<layout
+     ...
+     <com.kusu.loadingbutton.LoadingButton
+            android:id="@+id/loadingButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lb_isShadowEnable="false"/>
+       ...
+</layout>
+```
+
 
 # LICENSE
 
