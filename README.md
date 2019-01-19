@@ -3,6 +3,8 @@ Show or hide loading on button
 
 [![](https://jitpack.io/v/koushikcse/LoadingButton.svg)](https://jitpack.io/#koushikcse/LoadingButton)
 
+![LoadingButton demo](https://github.com/koushikcse/LoadingButton/blob/master/sample-demo.gif)
+
 ## Add to Gradle
 
 Add this to your project level `build.gradle` file
