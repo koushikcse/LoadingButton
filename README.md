@@ -61,15 +61,15 @@ Its very easy to use **LoadingButton** as its a custom button and contain all fe
    
    **Show Loading**
    
-   ```LoadingButton loadingButton = (LoadingButton) findViewById(R.id.loadingButton);
-      loadingButton.showLoading();
-   ```
+   `LoadingButton loadingButton = (LoadingButton) findViewById(R.id.loadingButton);
+    loadingButton.showLoading();
+   `
    
    **Hide Loading**
     
-    ``` loadingButton.hideLoading();
-    ```
-    
+   `LoadingButton loadingButton = (LoadingButton) findViewById(R.id.loadingButton);
+    loadingButton.showLoading();
+    `
 
 # LICENSE
 
