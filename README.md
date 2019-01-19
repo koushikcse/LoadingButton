@@ -19,7 +19,7 @@ And then add this to your module level `build.gradle` file
 
 ```gradle
 dependencies {
-    implementation "com.github.koushikcse:LoadingButon:${latest-version}"
+    implementation "com.github.koushikcse:LoadingButton:${latest-version}"
 }
 ```
 ## How it works
@@ -35,22 +35,41 @@ Its very easy to use **LoadingButton** as its a custom button and contain all fe
 ```xml
 <layout
      ...
-     <com.kusu.loadingbutton.LoadingButton
+    <com.kusu.loadingbutton.LoadingButton
             android:id="@+id/loadingButton"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:layout_height="51dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lb_isShadowEnable="false"/>
+            android:text="Shadow World!"
+            android:textColor="@color/white"
+            app:lb_buttonColor="@color/colorPrimary"
+            app:lb_isShadowEnable="true"
+            app:lb_isCircular="true"
+            app:lb_shadowColor="@color/colorPrimaryDark"
+            app:lb_shadowHeight="5dp" />
        ...
 </layout>
 ```
 
+
+### Methods to use in View Class 
+   
+   You can easily use to show loading on button click by calling `showLoading();` and hide loading by calling 
+   `hideLoading();` whenever you want to stop loading.
+   
+   **Show Loading**
+   
+   ```LoadingButton loadingButton = (LoadingButton) findViewById(R.id.loadingButton);
+      loadingButton.showLoading();
+   ```
+   
+   **Hide Loading**
+    
+    ``` loadingButton.hideLoading();
+    ```
+    
 
 # LICENSE
 
