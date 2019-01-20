@@ -18,12 +18,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 binding.loadingButton.showLoading();
+                binding.loadingButton1.showLoading();
+                binding.loadingButton2.showLoading();
             }
         });
         binding.button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 binding.loadingButton.hideLoading();
+                binding.loadingButton1.hideLoading();
+                binding.loadingButton2.hideLoading();
             }
         });
     }
