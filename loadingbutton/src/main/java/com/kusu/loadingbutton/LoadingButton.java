@@ -11,7 +11,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
-import android.os.Build;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -339,6 +338,14 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
             if (text.length() != 0)
                 setText(text);
         }
+    }
+
+    public String getButtonText() {
+        return text;
+    }
+
+    public void setButtonText(String text) {
+        this.text = text;
     }
 
     public void showLoading() {
