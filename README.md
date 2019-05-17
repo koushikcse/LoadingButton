@@ -68,7 +68,7 @@ Its very easy to use **LoadingButton** as its a custom button and contain all fe
    **Hide Loading**
     
    `LoadingButton loadingButton = (LoadingButton) findViewById(R.id.loadingButton);
-    loadingButton.showLoading();
+    loadingButton.hideLoading();
     `
 
 # LICENSE
