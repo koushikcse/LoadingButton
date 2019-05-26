@@ -2,6 +2,7 @@
 Show or hide loading on button
 
 [![](https://jitpack.io/v/koushikcse/LoadingButton.svg)](https://jitpack.io/#koushikcse/LoadingButton)
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-LoadingButton-green.svg?style=flat )]( https://android-arsenal.com/details/1/7683 )
 
 ![LoadingButton demo](https://github.com/koushikcse/LoadingButton/blob/master/sampledemo.gif)
 
