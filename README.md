@@ -20,7 +20,7 @@ And then add this to your module level `build.gradle` file
 
 ```gradle
 dependencies {
-    implementation "com.github.koushikcse:LoadingButton:${latest-version}"
+    implementation 'com.github.koushikcse:LoadingButton:1.4'
 }
 ```
 ## How it works
