@@ -315,7 +315,8 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
     private void drawIndeterminateProgress(Canvas canvas) {
         if (mAnimatedDrawable == null) {
             int offset = (getWidth() - getHeight()) / 2;
-            mColorIndicator = getResources().getColor(R.color.white);
+            //mColorIndicator = getResources().getColor(R.color.white);
+            mColorIndicator = mloaderColor;
             mAnimatedDrawable = new CircularAnimatedDrawable(mColorIndicator, mStrokeWidth);
             int left = offset + mPaddingProgress;
             int right = getWidth() - offset - mPaddingProgress;
