@@ -20,7 +20,7 @@ And then add this to your module level `build.gradle` file
 
 ```gradle
 dependencies {
-    implementation 'com.github.koushikcse:LoadingButton:1.5'
+    implementation 'com.github.koushikcse:LoadingButton:1.6'
 }
 ```
 ## How it works
@@ -48,6 +48,7 @@ Its very easy to use **LoadingButton** as its a custom button and contain all fe
             app:lb_buttonColor="@color/colorPrimary"
             app:lb_isShadowEnable="true"
             app:lb_isCircular="true"
+            app:lb_loaderColor="@color/colorAccent"
             app:lb_shadowColor="@color/colorPrimaryDark"
             app:lb_shadowHeight="5dp" />
        ...
