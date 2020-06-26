@@ -80,6 +80,7 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
         isShadowEnabled = true;
         Resources resources = getResources();
         if (resources == null) return;
+        mloaderColor = resources.getColor(R.color.white);
         mButtonColor = resources.getColor(R.color.fbutton_default_color);
         mShadowColor = resources.getColor(R.color.fbutton_default_shadow_color);
         mShadowHeight = resources.getDimensionPixelSize(R.dimen.fbutton_default_shadow_height);
@@ -262,6 +263,7 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
         this.mCornerRadius = cornerRadius;
         refresh();
     }
+
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
