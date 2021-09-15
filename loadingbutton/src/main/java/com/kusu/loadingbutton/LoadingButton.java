@@ -174,6 +174,7 @@ public class LoadingButton extends AppCompatButton implements View.OnTouchListen
             unpressedDrawable = createDrawable(mCornerRadius, disabledColor, Color.TRANSPARENT);
         }
         updateBackground(unpressedDrawable);
+        setLayerType(LAYER_TYPE_SOFTWARE,null);
         //Set padding
         this.setPadding(mPaddingLeft, mPaddingTop + mShadowHeight, mPaddingRight, mPaddingBottom + mShadowHeight);
     }
